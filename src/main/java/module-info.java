@@ -6,6 +6,7 @@ module start {
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens start to javafx.fxml;
     exports start;
