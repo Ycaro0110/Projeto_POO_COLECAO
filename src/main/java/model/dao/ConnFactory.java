@@ -9,7 +9,7 @@ public class ConnFactory {
     public static Connection getConnection() throws SQLException {
 
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/agenda", "root", "Ycaro123");
+                "jdbc:mysql://localhost:3306/colecao_notas", "root", "Ycaro123");
 
         return conn;
     }

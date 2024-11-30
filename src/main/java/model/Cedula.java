@@ -2,7 +2,7 @@ package model;
 
 public class Cedula {
     private int id;
-    private int nome;
+    private String nome;
     private int valor;
     private String descricao;
     private String foto;
@@ -11,7 +11,7 @@ public class Cedula {
     public Cedula() {
     }
 
-    public Cedula(int nome, int valor, String descricao, boolean status, String foto) {
+    public Cedula(String nome, int valor, String descricao, boolean status, String foto) {
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
@@ -27,11 +27,11 @@ public class Cedula {
         this.id = id;
     }
 
-    public int getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(int nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
