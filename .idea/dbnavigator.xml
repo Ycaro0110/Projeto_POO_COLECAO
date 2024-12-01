@@ -17,7 +17,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6aca8787-bdb7-44d4-bf63-4f67037527e6">
-      <console name="Connection" type="STANDARD" schema="colecao_notas" session="Pool"><![CDATA[select * from cedula;]]></console>
+      <console name="Connection" type="STANDARD" schema="colecao_notas" session="Main"><![CDATA[alter table cedula
+alter column pais varchar(80) not null;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

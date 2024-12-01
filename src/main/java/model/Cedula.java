@@ -7,6 +7,7 @@ public class Cedula {
     private String descricao;
     private String foto;
     private boolean status;
+    private String pais;
 
     public Cedula() {
     }
@@ -65,5 +66,13 @@ public class Cedula {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 }

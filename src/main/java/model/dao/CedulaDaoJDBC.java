@@ -6,9 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import model.Cedula;
-
-
 
 
 public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
@@ -44,13 +43,14 @@ public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
     public void editar(Cedula entidade) throws Exception {
 
         try {
-            PreparedStatement ps = conn.prepareStatement("UPDATE Cedula SET nome=?, valor=?, descricao=?, foto=?, status=? WHERE id=? ");
+            PreparedStatement ps = conn.prepareStatement("UPDATE Cedula SET nome=?, valor=?, descricao=?, foto=?,pais=? status=? WHERE id=? ");
             ps.setString(1, entidade.getNome());
             ps.setInt(2, entidade.getValor());
             ps.setString(3, entidade.getDescricao());
             ps.setString(4, entidade.getFoto());
             ps.setBoolean(5, entidade.isStatus());
-            ps.setInt(6, entidade.getId());
+            ps.setString(6, entidade.getPais());
+            ps.setInt(7, entidade.getId());
             ps.execute();
         } finally {
             if (conn != null) {
@@ -92,7 +92,9 @@ public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
                 c.setValor(rs.getInt("valor"));
                 c.setDescricao(rs.getString("descricao"));
                 c.setFoto(rs.getString("foto"));
+                c.setPais(rs.getString("pais"));
                 c.setStatus(rs.getBoolean("status"));
+
 
                 return c;
             } else {
@@ -122,6 +124,7 @@ public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
                 c.setValor(rs.getInt("valor"));
                 c.setDescricao(rs.getString("descricao"));
                 c.setFoto(rs.getString("foto"));
+                c.setPais(rs.getString("pais"));
                 c.setStatus(rs.getBoolean("status"));
                 lista.add(c);
             }
