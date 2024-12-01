@@ -48,8 +48,8 @@ public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
             ps.setInt(2, entidade.getValor());
             ps.setString(3, entidade.getDescricao());
             ps.setString(4, entidade.getFoto());
-            ps.setBoolean(5, entidade.isStatus());
-            ps.setString(6, entidade.getPais());
+            ps.setString(5, entidade.getPais());
+            ps.setBoolean(6, entidade.isStatus());
             ps.setInt(7, entidade.getId());
             ps.execute();
         } finally {
