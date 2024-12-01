@@ -7,6 +7,7 @@ module start {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires mysql.connector.j;
 
     opens start to javafx.fxml;
     exports start;
