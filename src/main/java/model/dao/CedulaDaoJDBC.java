@@ -57,7 +57,6 @@ public class CedulaDaoJDBC implements InterfaceDao<Cedula> {
                 conn.close();
             }
         }
-
     }
 
     @Override
